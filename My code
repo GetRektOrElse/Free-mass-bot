@@ -1,0 +1,16 @@
+
+import pyautogui
+
+
+pyautogui.moveTo(661, 224)
+
+
+pyautogui.keyDown('w')
+
+pyautogui.moveTo(552, 393, 0.4, pyautogui.easeInQuad) 
+
+pyautogui.moveTo(672, 508, 0.4, pyautogui.easeInQuad)
+
+pyautogui.moveTo(804, 396, 0.4, pyautogui.easeInQuad)
+
+pyautogui.moveTo(661, 224, 0.4, pyautogui.easeInQuad)
