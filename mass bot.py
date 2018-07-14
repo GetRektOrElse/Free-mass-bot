@@ -10,4 +10,7 @@ def rotate(center, radius, seconds, points):
     for i in range(points):
         gui.moveTo(*coords(center, radius, i * unit_angle), seconds/points)
 
-rotate([i/2 for i in gui.size()], 150, 0, 20)
+gui.keyDown('w')
+for i in range(15):
+    rotate([i/2 for i in gui.size()], 400, 0, 20)
+gui.keyUp('w')
