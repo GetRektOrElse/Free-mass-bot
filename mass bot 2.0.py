@@ -1,6 +1,8 @@
 from math import sin, cos, tan, asin, acos, atan, pi
 import pyautogui as gui
 
+
+
 def coords(center, radius, angle):
     offset = (round(radius * sin(angle), 3), -round(radius * cos(angle), 3))
     return tuple(a + b for a, b in zip(center, offset))
@@ -10,7 +12,8 @@ def rotate(center, radius, seconds, points):
     for i in range(points):
         gui.moveTo(*coords(center, radius, i * unit_angle), seconds/points)
 
+gui.click(x=1081, y=397)
 gui.keyDown('w')
-for i in range(15):
-    rotate([i/2 for i in gui.size()], 400, 0, 20)
+for i in range(5):
+    rotate([i/2 for i in gui.size()], 200, 0, 10)
 gui.keyUp('w')
